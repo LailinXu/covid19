@@ -15,7 +15,10 @@ How to download and install: https://root.cern.ch/downloading-root
 python  fun_covid19.py
 ```
 
-The input data is under `data` as `txt` files, which could be found online, like https://www.worldometers.info/coronavirus/.
+The input data is under `data` as `txt` files, which could be found online, like 
+* https://www.worldometers.info/coronavirus/
+* https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide
+
 
 How it works:
 * Read data and fill them into a histogram;
