@@ -3,7 +3,7 @@
 Simple fit to COVID-19 cases as a function of time.
 
 ## Prerequists 
-[ROOT](https://root.cern.ch/) (an open source data analysis package for HEP).
+[ROOT](https://root.cern.ch/) (an open-source data analysis package for HEP).
 How to download and install: https://root.cern.ch/downloading-root
 
 
