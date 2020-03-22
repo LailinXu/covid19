@@ -69,19 +69,21 @@ def convert_date(list_label=[], ref_date="1:20/02/15"):
              corresponding actual date
   """
 
+  ## reference index
   ref_ind=ref_date.split(":")[0]
+  ## reference date
   ref_d=ref_date.split(":")[1]
 
   datetime_object = datetime.strptime(ref_d, '%y/%m/%d')
 
   list_date=[]
   for il, la in enumerate(list_label):
+    # distance to the reference
     diff=int(la)-int(ref_ind)
-
+    # get the actual date
     rdate= (datetime_object + timedelta(days=diff)).date().strftime('%y-%m-%d')
     
     list_date.append(rdate)
-
 
   return list_date
 
@@ -176,7 +178,8 @@ def fit(infile="", label="", output=""):
 
   yscale=2.5
 
-  doRatio=1
+  doRatio=1 # compare and plot the observed and predicted
+
   ## plot
   canvas_w,canvas_h=800,600
   fraction=1.
