@@ -22,6 +22,9 @@ def read_data(infile="", dname=""):
     day1 Ncases1
     day2 Ncases2
     ...
+  
+  here day1 could be real date, or just a number. Assume all days are consecutive. 
+ 
   """
 
   hname="hist_"+dname
@@ -34,6 +37,7 @@ def read_data(infile="", dname=""):
   with open(infile, "r") as fin:
     for line in fin:
       line=line.rstrip()
+      if line[0]=="#": continue ## ignore comments
       sline=line.split() 
       if len(sline)>=2:
         nc=int(sline[1])
