@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
+# import ROOT
 import sys
+# path to root lib, can be found via `root-config  --libdir`
 ROOTSYS = '/Applications/root/root_v6.16.00/lib'
 sys.path.append(ROOTSYS)
 
@@ -14,6 +16,13 @@ from datetime import date,timedelta, datetime
 ## a better model can be found here: https://www.thelancet.com/action/showPdf?pii=S0140-6736%2820%2930260-9
 
 def read_data(infile="", dname=""):
+  """
+  read data and fill a histogram
+  data format: 
+    day1 Ncases1
+    day2 Ncases2
+    ...
+  """
 
   hname="hist_"+dname
   nbin=100
@@ -56,6 +65,8 @@ def read_data(infile="", dname=""):
 def convert_date(list_label=[], ref_date="1:20/02/15"):
   """
   convert index to real date
+  ref_date:  the reference date, for example, "1:20/02/15": "1" means the index "1" from the raw input data; and "20/02/15" is the
+             corresponding actual date
   """
 
   ref_ind=ref_date.split(":")[0]
